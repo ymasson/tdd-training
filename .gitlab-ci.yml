@@ -1,0 +1,2 @@
+test:
+  script: bash test/bash_unit test/test_url-splitting.sh
