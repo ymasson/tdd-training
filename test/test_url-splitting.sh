@@ -1,9 +1,17 @@
 #!/bin/bash
 
-###source url-splitting.sh >/dev/null
+source url-splitting.sh >/dev/null
 
 test_binary_exist() {
   assert "test -e ../url-splitting.sh"
+}
+
+test_protocol_function() {
+  assert_equals "http" "$(get_protocol http://www.test.com)"
+}
+
+test_domain_function() {
+  assert_equals "www.test.com" "$(get_domain http://www.test.com)"
 }
 
 test_http_protocol() {
