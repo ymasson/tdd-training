@@ -1,2 +1,5 @@
 language: bash
 script: ./test/bash_unit test/test_url-splitting.sh
+
+language: bash
+script: ./test/bash_unit test/test_url-splitting.pl
