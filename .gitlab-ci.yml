@@ -6,8 +6,6 @@ check_master:
   stage: master
   script:
     - bash test/bash_unit test/test_url-splitting.sh
-  tags:
-    - shell
   except:
     - production
 
@@ -16,6 +14,4 @@ merge_to_production:
   script:
     - git pull origin production
     - git push master HEAD:production
-  tags:
-    - shell
   when: on_success
